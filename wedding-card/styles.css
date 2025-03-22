@@ -1,0 +1,476 @@
+/* ==============================
+   🌟 전체 스타일
+   ============================== */
+   body {
+    margin: 0;
+    font-family: 'SUIT Variable', sans-serif;
+    background-color: #F6F7F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* ✅ 좌우 스크롤 방지 */
+    overflow-y: auto;
+}
+
+/* ✅ 전체 텍스트 줄바꿈 설정 */
+* {
+    word-break: keep-all; /* 띄어쓰기 기준으로 줄바꿈 */
+}
+
+/* ==============================
+   🖼️ 전체 페이지 정렬
+   ============================== */
+.wrapper {
+    width: 100%;
+    max-width: 100vw; /* ✅ 뷰포트 초과 방지 */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* 601px 이상일 때 */
+@media (min-width: 601px) {
+    .wrapper {
+        max-width: calc(100% - 80px); /* ✅ 좌우 40px 여백 */
+        padding: 60px 40px; /* ✅ 위아래 60px, 좌우 40px 여백 */
+    }
+}
+
+/* ==============================
+   🌟 공통 스타일 시스템
+   ============================== */
+
+/* ✅ 1. 섹션별 배경색 설정 가능 */
+section {
+    padding: var(--section-padding, 40px 24px); /* ✅ 공통 패딩 적용 */
+    background-color: var(--section-bg, transparent); /* ✅ 개별 섹션 배경색 지정 가능 */
+    text-align: center;
+}
+@media (min-width: 601px) {
+    section {
+        padding: var(--section-padding, 48px 36px); /* ✅ 공통 패딩 적용 */
+        background-color: var(--section-bg, transparent); /* ✅ 개별 섹션 배경색 지정 가능 */
+        text-align: center;
+    }
+}
+
+
+/* ✅ 2. h2 (섹션 타이틀) 통일 & 개별 색상 지정 가능 */
+h2 {
+    font-size: var(--header-font-size); /* ✅ 제목 크기 변수화 */
+    font-weight: bold;
+    color: var(--header-color, #333); /* ✅ 개별 섹션마다 색상 지정 가능 */
+    margin-bottom: 16px;
+}
+
+/* ✅ 3. 텍스트 위계 추가 (title, label 용) */
+.text-title {
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    color: var(--text-title-color, --neutral-900);
+}
+
+.text-body-bold {
+    font-size: var(--body-font-size);
+    font-weight: bold;
+    color: var(--text-body-color, --neutral-500);
+}
+
+.text-body {
+    font-size: var(--body-font-size);
+    font-weight: 400;
+    line-height: 180%;
+    color: var(--text-body-color, --neutral-500);
+}
+
+.text-label {
+    font-size: var(--label-font-size);
+    font-weight: 700;
+    line-height: 168%;
+    color: var(--text-label-color, --neutral-400);
+}
+
+/* ✅ 4. 컬러 시스템 (Neutral, Primary, Secondary, Tertiary) */
+:root {
+    --neutral-100: #ffffff;
+    --neutral-200: #F6F7F8;
+    --neutral-300: #dbe0e6;
+    --neutral-400: #646e75;
+    --neutral-500: #464c51;
+    --neutral-900: #0b0d11;
+
+    --blue-100: #F7F8FD;
+    --blue-200: #f9fbff;
+    --blue-900: #2747A7;
+
+    --ivory-100: #FBFAF6;
+    --ivory-200: #E8E5DC;
+    --ivory-900: #756d5a;
+
+    --primary: RoyalBlue;
+    --secondary: Tan;
+    --tertiary: #2747A7;
+
+    /* 기본 텍스트 크기 */
+    --header-font-size: 22px;
+    --title-font-size: 18px;
+    --body-font-size: 15px;
+    --label-font-size: 13px;
+}
+
+
+/* ==============================
+   📌 메인 컨테이너 (콘텐츠 영역)
+   ============================== */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    box-sizing: border-box; /* ✅ padding 포함하여 크기 계산 */
+}
+
+/* 601px 이상일 때 */
+@media (min-width: 601px) {
+    .container {
+        max-width: 600px;
+        border-radius: 24px;
+        box-shadow: 0px 20px 40px 0px rgba(11, 13, 17, 0.24);
+    }
+}
+
+/* ✅ 모든 섹션 스타일 */
+.section {
+    padding: 32px 24px;
+    text-align: center;
+}
+
+@media (min-width: 601px) {
+    .section {
+        padding: 48px 36px;
+        text-align: center;
+    }
+}
+
+
+
+
+content {
+    display: block; /* 콘텐츠가 블록 형태로 차지 */
+    width: 100%; /* 부모 요소의 너비를 모두 차지 */
+    text-align: left; /* 콘텐츠는 좌측 정렬 */
+    padding: 8px;
+  }
+
+/* 🌟 메인 섹션 스타일 */
+.main-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 📌 메인 이미지 스타일 */
+.main-image {
+    width: 100%; /* ✅ 부모에 맞춰 꽉 차게 설정 */
+    height: auto; /* ✅ 비율 유지 */
+    max-width: 100%; /* ✅ 뷰포트 초과 방지 */
+    object-fit: cover; /* ✅ 이미지가 잘리지 않도록 유지 */
+}
+
+/* 601px 이상일 때 */
+@media (min-width: 601px) {
+    .main-image {
+        border-top-left-radius: 24px;  /* ✅ 상단 왼쪽 모서리만 둥글게 */
+        border-top-right-radius: 24px; /* ✅ 상단 오른쪽 모서리만 둥글게 */
+    }
+}
+
+
+/* ==============================
+   🔳 팝업 (모달 창)
+   ============================== */
+ 
+   /* 팝업 배경 */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(231, 235, 241, 0.24);
+    backdrop-filter: blur(16px); /* 블러 효과 추가 */
+    justify-content: center;
+    align-items: center;
+    z-index: 199;
+}
+
+/* 🌟 팝업 내부 스타일 개선 */
+.popup-content {
+    background: white;
+    padding: 24px 24px 32px 24px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    max-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ✅ 제목 폰트 크기 조정 */
+.popup-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* ✅ 인풋 스타일 */
+#attend-name {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
+    font-size: 18px;
+    border: 1px solid var(--neutral-300);
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease-out;
+    box-sizing: border-box;
+}
+
+#attend-name::placeholder {
+    color: #ccc;
+}
+
+#attend-name:focus {
+    border: 1px solid var(--neutral-900);
+}
+
+/* ✅ 신랑측 / 신부측 선택 (라운드형 알약 디자인) */
+.attend-radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* ✅ 버튼 간격 2px */
+    margin: 16px 32px 32px 32px;
+}
+
+.attend-radio-group input {
+    display: none; /* ✅ 기본 라디오 버튼 숨김 */
+}
+
+.attend-radio-group label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    font-size: 14px; /* ✅ 텍스트 크기 축소 */
+    font-weight: 500;
+    color: var(--neutral-400);
+    border: 1px solid #ccc; /* ✅ 아웃라인 스타일 */
+    background: none;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+/* ✅ 선택된 버튼 스타일 */
+.attend-radio-group input:checked + label {
+    font-weight: 700;
+    border-color: royalblue;
+    color: royalblue;
+    background: none;
+}
+
+/* ✅ 제출 버튼 스타일 */
+.attend-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.attend-buttons button {
+    flex: 1;
+    padding: 16px;
+    font-size: 15px; /* ✅ 버튼 크기 조정 */
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-out-in;
+}
+
+.attend-buttons .attend-yes {
+    background: royalblue;
+    color: white;
+}
+
+.attend-buttons .attend-no {
+    background: #f1f3f5;
+    color: #333;
+}
+
+.attend-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* ==============================
+   🎯 CTA 버튼 (고정 위치)
+   ============================== */
+.cta-button {
+    position: fixed;
+    right: max(20px, env(safe-area-inset-right)); /* ✅ iOS 노치 대응 */
+    bottom: 40px;
+    background: royalblue;
+    color: white;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 99px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.24);
+    z-index: 1000;
+}
+
+/* 팝업이 열렸을 때 CTA 버튼 색상 변경 */
+.cta-button.popup-open {
+    background: var(--blue-200);
+    border: 1px solid var(--neutral-300);
+    color: var(--neutral-900);
+}
+
+
+/* ==============================
+   ✅ 추가적인 버튼, 계좌번호 스타일
+   ============================== */
+
+.account-container {
+    display: flex;                /* Flexbox 레이아웃 사용 */
+    gap: 20px;                    /* 카드 간의 간격을 20px로 설정 */
+    padding: 16px 0;
+    flex-direction: column;       /* 세로 방향으로 카드 배치 */
+}
+
+.account-box {
+    display: block; /* 콘텐츠가 블록 형태로 차지 */
+    background: #ffffff;
+    padding: 20px 24px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 16px rgba(19, 20, 20, 0.08);
+}
+
+/* 601px 이상일 때 */
+@media (min-width: 601px) {
+    .account-box {
+        display: block; /* 콘텐츠가 블록 형태로 차지 */
+        background: #ffffff;
+        padding: 24px 32px;
+        border-radius: 20px;
+        text-align: left;
+    }
+}
+
+.copy-btn {
+    display: flex; /* 콘텐츠가 블록 형태로 차지 */
+    justify-content: space-between; 
+    gap: 8px;
+    width: 100%; /* 부모 요소의 너비를 모두 차지 */
+    background: var(--neutral-200);
+    color: royalblue;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap; /* 텍스트가 줄바꿈 없이 한 줄로 유지되도록 설정 */
+}
+
+/* 🖼️ 갤러리 스타일 */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 한 줄에 3개 */
+    gap: 4px; /* ✅ 상하좌우 간격 4px 동일하게 설정 */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* ✅ 기본적으로 가득 차도록 설정 */
+    max-width: 600px; /* ✅ 600px 이하에서는 화면 가득 채움 */
+    margin: 0 auto; /* ✅ 중앙 정렬 */
+}
+
+/* ✅ 601px 이상일 때 갤러리 크기 고정 */
+@media (min-width: 601px) {
+    .gallery-container {
+        max-width: 420px; /* ✅ 601px 이상에서는 420px로 제한 */
+    }
+}
+
+/* 🖼️ 갤러리 이미지 스타일 */
+.gallery-container a img {
+    width: 100%; /* ✅ 부모 요소 크기만큼 자동 조정 */
+    height: auto; /* ✅ 비율 유지 */
+    aspect-ratio: 1 / 1; /* ✅ 정방형 유지 */
+    object-fit: cover; /* ✅ 어떤 비율이든 꽉 차게 */
+}
+
+
+/*달력*/
+.calendar-table {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    /* width: 300px; */
+    margin: auto;
+    /* border-collapse: collapse; */
+}
+th, td {
+    width: 14.28%;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+}
+th {
+    background-color: transparent; /* 배경색 제거 */
+}
+.sunday, .holiday {
+    color: BurlyWood;
+    font-weight: bold;
+}
+.special-day {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: indianred;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* 🔘 명소 안내 버튼 (알약 모양) */
+.landmarks a {
+    display: inline-block; /* ✅ 버튼처럼 보이도록 변경 */
+    padding: 16px 24px; /* ✅ 터치 영역 고려 */
+    min-width: 240px; /* ✅ 최소 크기 지정 */
+    background: #e1f3ff; /* ✅ 배경색 */
+    color: var(--neutral-900); /* ✅ 텍스트 색상 */
+    font-size: 17px; /* ✅ 가독성 좋은 폰트 크기 */
+    font-weight: 600; /* ✅ 볼드 적용 */
+    text-align: center; /* ✅ 가운데 정렬 */
+    border-radius: 12px; /* ✅ 알약 모양 */
+    border: 1px solid #badff6;
+    text-decoration: none; /* ✅ 밑줄 제거 */
+    transition: background 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* 🖱️ 마우스 올렸을 때 효과 */
+.landmarks a:hover {
+    background: #badff6; 
+}
+
+/* 📱 터치 시 효과 */
+.landmarks a:active {
+    transform: scale(0.95); /* ✅ 살짝 눌리는 효과 */
+}

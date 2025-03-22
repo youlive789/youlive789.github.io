@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건우와 사빈의 결혼식</title>
+    <meta content="Love never fails" name="description" />
+    <meta property="og:title" content="건우와 사빈의 결혼식">
+    <meta property="og:description" content="건우와 사빈의 결혼식에 초대합니다">
+    <meta property="og:image" content="../GPT0315/resource/img-ogtag.png">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <link href="resource/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="resource/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="resource/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <!-- SUIT Variable 폰트 적용 -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <main class="main-section">
+                <img src="resource/img-main.jpg" alt="메인 이미지" class="main-image">
+            </main>
+
+            <section class="wedding-info" style="--section-bg: var(--ivory-100);">
+                <h2 style="--header-color: var(--ivory-900);">The last day of May</h2>
+                <p class="text-label" style="--text-label-color: var(--secondary);">소중한 분들을 초대합니다</p>
+                <p class="text-body" style="--text-body-color: var(--neutral-500); padding-top: 24px;">
+                    4년 전 오늘, 사랑이 시작된 날에<br> 서로의 손을 맞잡고 <br> 함께하는 일상을 약속하려 합니다.
+                </p>
+                <p class="text-body"
+                    style="--text-body-color: var(--neutral-500); margin-top: 24px; padding-bottom: 24px;">
+                    새로운 시작을 축복해 주신다면 <br> 더없이 큰 기쁨으로 간직하겠습니다.
+                </p>
+            </section>
+
+            <section class="calendar" style="--section-bg: var(--neutral-100);">
+                <h2 style="--header-color: var(--secondary);">예식 안내</h2>
+                <p class="text-title" style="--text-title-color: var(--neutral-900); margin-bottom: 8px;">2025년 5월 31일
+                    토요일</p>
+                <p class="text-title" style="--text-title-color: var(--neutral-900); margin-top: 0px;">오후 1시, 인천 답동성당
+                </p>
+                <p class="text-label" style="--text-label-color: var(--neutral-400); margin-bottom: 3px;">김병훈 · 문경미의
+                    장남<b> 김건우</b>
+                </p>
+                <p class="text-label" style="--text-label-color: var(--neutral-400); margin-top: 0;">박승호 · 오현옥의 장녀<b>
+                        박사빈</b>
+                </p>
+
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th class="sunday">일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sunday"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">4</td>
+                            <td class="holiday">5</td>
+                            <td class="holiday">6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="holiday">15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td><span class="special-day">31</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <section class="transportation" style="--section-bg: var(--blue-100);">
+                <h2 style="--header-color: var(--blue-900);">오시는 길</h2>
+                <div class="map-section">
+                    <div class="map-container" id="map-container">
+                        <div id="map" style="width: 100%; height: 400px; margin:auto"></div>
+                        <code id="snippet" class="snippet"></code>
+                    </div>
+                </div>
+                <script type="text/javascript"
+                    src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=awq81t8fy6"></script>
+                <script id="code">
+                    var mapDiv = document.getElementById('map');
+                    var map = new naver.maps.Map(mapDiv);
+                </script>
+                <content class="contents">
+                    <p class="text-title" style="--text-title-color: var(--neutral-900);">🚗 자차</p>
+                    <p style="color: var(--neutral-500); margin-bottom: 0px;"><b>내비게이션 '답동성당' 검색</b></p>
+                    <p style="color: var(--neutral-500);margin-top: 10px; margin-bottom: 0px;">성당 아래 공영주차장이 있으나 만차가 잦으므로
+                        '인천기독병원' 주차 권장</p>
+                    <p style="color: var(--neutral-400); margin-top: 18px; padding-bottom: 24px; font-size: 14px;">➡️
+                        식장에서 주차권 받아가세요.</p>
+                    <p class="text-title" style="--text-title-color: var(--neutral-900);">🚇 지하철</p>
+                    <p style="color: var(--neutral-500); margin-bottom: 0px;"><b>1호선 동인천역</b> 2번 출구 도보 12분</p>
+                    <p style="color: var(--neutral-500);margin-top: 10px; padding-bottom: 24px;">수인분당선 <b>신포역</b> 5번 출구
+                        도보 11분</p>
+                    <p class="text-title" style="--text-title-color: var(--neutral-900);">🚌 버스</p>
+                    <p style="color: var(--neutral-500); padding-bottom: 24px;"><b>신포시장 정류장 하차 후</b> 도보 5분</p>
+                </content>
+            </section>
+
+            <section class="location" style="--section-bg: var(--neutral-100);">
+                <h2 style="--header-color: var(--neutral-900); margin-bottom: 24px;">갤러리</h2>
+
+                <!-- <p class="text-title" style="--text-title-color: var(--neutral-900);"><b>사진</b> 엄선하여 배치 예정</p> -->
+                <div class="gallery-container">
+                    <a href="resource/1.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_1.png"><img src="resource/thumbnail/thumbnail_1.png" alt="1.jpg"></a>
+                    <a href="resource/2.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_2.png"><img src="resource/thumbnail/thumbnail_2.png" alt="2.jpg"></a>
+                    <a href="resource/3.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_3.png"><img src="resource/thumbnail/thumbnail_3.png" alt="3.jpg"></a>
+                    <a href="resource/4.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_4.png"><img src="resource/thumbnail/thumbnail_4.png" alt="4.jpg"></a>
+                    <a href="resource/5.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_5.png"><img src="resource/thumbnail/thumbnail_5.png" alt="5.jpg"></a>
+                    <a href="resource/6.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_6.png"><img src="resource/thumbnail/thumbnail_6.png" alt="6.jpg"></a>
+                    <a href="resource/7.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_7.png"><img src="resource/thumbnail/thumbnail_7.png" alt="7.jpg"></a>
+                    <a href="resource/8.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_8.png"><img src="resource/thumbnail/thumbnail_8.png" alt="8.jpg"></a>
+                    <a href="resource/9.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_9.png"><img src="resource/thumbnail/thumbnail_9.png" alt="9.jpg"></a>
+                    <a href="resource/10.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_10.png"><img src="resource/thumbnail/thumbnail_10.png" alt="10.jpg"></a>
+                    <a href="resource/11.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_11.png"><img src="resource/thumbnail/thumbnail_11.png" alt="11.jpg"></a>
+                    <a href="resource/12.jpg" data-fslightbox="gallery" data-thumb="resource/thumbnail/thumbnail_12.png"><img src="resource/thumbnail/thumbnail_12.png" alt="12.jpg"></a>
+                </div>
+            </section>
+
+            <section class="gift" style="--section-bg: var(--blue-100);">
+                <h2 style="--header-color: var(--neutral-900);">마음 전하실 곳</h2>
+                <div class="account-container">
+                    <div class="account-box">
+                        <p class="text-title" style="--text-title-color: var(--neutral-900);">💳 신랑 계좌번호</p>
+                        <p class="text-label" style="--text-label-color: var(--neutral-500);">
+                            <button class="copy-btn" data-target="groomAccount" data-number="987-654-321098"><span
+                                    id="groomAccount" style="color: #1e2127;" data-target="groomAccount"
+                                    data-number="987-654-321098"><b>카카오뱅크</b> 987-654-321098</span><b
+                                    style="color: gray;" data-target="groomAccount"
+                                    data-number="987-654-321098">복사</b></button>
+                        </p>
+                    </div>
+                    <div class="account-box">
+                        <p class="text-title" style="--text-title-color: var(--neutral-900);">💳 신부 계좌번호</p>
+                        <p class="text-label" style="--text-label-color: var(--neutral-500);">
+                            <button class="copy-btn" data-target="brideAccount" data-number="987-654-321098"><span
+                                    id="brideAccount" style="color: #1e2127;" data-target="brideAccount"
+                                    data-number="987-654-321098"><b>우리은행</b> 987-654-321098</span><b
+                                    style="color: gray;" data-target="brideAccount"
+                                    data-number="987-654-321098">복사</b></button>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="landmarks" style="--section-bg: var(--neutral-100);">
+                <h2 style="--header-color: var(--neutral-900); padding-bottom: 8px;">주변 명소 안내</h2>
+                <p class="text-label"
+                    style="--text-label-color: var(--neutral-400); font-weight: 500; padding-bottom: 24px;"> 따뜻한 5월☀️ 멀리
+                    인천까지 발걸음 해주신 분들을 위해 <br>
+                    근처 볼거리, 먹거리 정보를 간소하게 준비하였습니다. <br>
+                    <b>아래 버튼을 눌러 확인해주세요!</b>
+                </p>
+                <a href="https://www.notion.so/geonwookim/1fec955fc58846459b25e332794d9363?pvs=4" target="_blank"
+                    class="text-title" style="--text-title-color: var(--primary);">👀 보러가기 </a>
+            </section>
+
+            <div class="finish" style="--section-bg: var(--neutral-100); padding: 24px 0px 16px 0px;">
+                <p style="font-size: 11px; color: #C7D0D6; text-align: center;">Copyright 2025. 1803호 All rights
+                    reserved</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 참석 여부 버튼 -->
+    <button id="ctaButton" class="cta-button">참석 여부</button>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2 style="padding-bottom: 12px;">참석 여부를 알려주세요</h2>
+
+            <!-- 이름 입력 필드 -->
+            <input type="text" placeholder="이름을 입력해주세요" id="attend-name">
+
+            <!-- 신랑측 / 신부측 선택 -->
+            <div class="attend-radio-group">
+                <input type="radio" id="groom" name="attend-side" value="groom">
+                <label for="groom">신랑측</label>
+
+                <input type="radio" id="bride" name="attend-side" value="bride">
+                <label for="bride">신부측</label>
+            </div>
+
+            <!-- 참석 여부 버튼 -->
+            <div class="attend-buttons">
+                <button class="attend-no">못 가요</button>
+                <button class="attend-yes">참석할게요</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, doc, getDoc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCbp2CZwbBpQ1qvpZmXd1VJq6trUzXPIQ4",
+            authDomain: "damiano-savina-wedding.firebaseapp.com",
+            projectId: "damiano-savina-wedding",
+            storageBucket: "damiano-savina-wedding.firebasestorage.app",
+            messagingSenderId: "85920523238",
+            appId: "1:85920523238:web:e7637e60220c4ca4cb2c27",
+            measurementId: "G-RFMNQY3G65"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function addUser(name, side, attend) {
+            const docRef = await addDoc(collection(db, "wedding"), {
+                name: name,
+                side: side,
+                attend: attend,
+                date: getCurrentDateTime()
+            });
+        }
+
+        document.getElementsByClassName("attend-yes")[0].addEventListener("click", () => {
+            try {
+                const name = document.getElementById("attend-name").value;
+                const side = document.querySelector('input[name="attend-side"]:checked').value;
+                const attend = true;
+
+                if (name === null || side === null) {
+                    alert("입력란을 모두 입력해주세요!")
+                    return;
+                }
+
+
+                addUser(name, side, attend)
+            }
+            catch (e) {
+                // do nothing
+            }
+            finally {
+                document.getElementById("ctaButton").click();
+            }
+        })
+
+        document.getElementsByClassName("attend-no")[0].addEventListener("click", () => {
+            try {
+                const name = document.getElementById("attend-name").value;
+                const side = document.querySelector('input[name="attend-side"]:checked').value;
+                const attend = false;
+
+                if (name === null || side === null) {
+                    alert("입력란을 모두 입력해주세요!")
+                    return;
+                }
+
+
+                addUser(name, side, attend)
+            }
+            catch (e) {
+                // do nothing
+            }
+            finally {
+                document.getElementById("ctaButton").click();
+            }
+        })
+    </script>
+</body>
+
+</html>
