@@ -411,6 +411,7 @@ content {
     height: auto; /* ✅ 비율 유지 */
     aspect-ratio: 1 / 1; /* ✅ 정방형 유지 */
     object-fit: cover; /* ✅ 어떤 비율이든 꽉 차게 */
+    vertical-align: middle;
 }
 
 
