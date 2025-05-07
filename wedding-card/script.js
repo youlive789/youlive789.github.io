@@ -43,9 +43,8 @@ var map = new naver.maps.Map('map', {
     zoomControl: false, //줌 컨트롤의 표시 여부
     draggable: false,
     zoomable: false,
-    zoomControlOptions: { //줌 컨트롤의 옵션
-        position: naver.maps.Position.TOP_RIGHT
-}});
+    scrollWheel: false,
+    });
 var marker = new naver.maps.Marker({
     icon: {
         url: "./heart-icon.png",
