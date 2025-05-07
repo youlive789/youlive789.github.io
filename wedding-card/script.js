@@ -40,7 +40,9 @@ var map = new naver.maps.Map('map', {
     center: new naver.maps.LatLng(37.471108, 126.629816),
     zoom: 17,
     minZoom: 8, //지도의 최소 줌 레벨
-    zoomControl: true, //줌 컨트롤의 표시 여부
+    zoomControl: false, //줌 컨트롤의 표시 여부
+    draggable: false,
+    zoomable: false,
     zoomControlOptions: { //줌 컨트롤의 옵션
         position: naver.maps.Position.TOP_RIGHT
 }});
